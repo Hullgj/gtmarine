@@ -1,0 +1,12 @@
+@import '_base.less';
+
+.nav {
+	text-transform: uppercase;
+	.navbar {
+		li {
+			a{
+			
+			}
+		}	
+	}
+}

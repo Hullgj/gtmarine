@@ -1,0 +1,120 @@
+@import '_base.less';
+
+.transitions(@x,@y,@z) {
+	transition: @x @y @z;
+}
+
+.landscape(@col-number) {
+	.make-md-column(@col-number);
+	.make-lg-column(@col-number);
+	.make-sm-column(@col-number);
+}
+
+.small(@col-number) {
+	.make-xs-column(@col-number);
+}
+
+html, body, .wrapper {
+	width: 100%;
+}
+
+.wrapper {
+	border-top: 4px solid @brand-primary;
+}
+
+.nav {
+	text-transform: uppercase;
+	.nav-active {
+		background: lighten(@brand-primary, 35%);
+	}
+
+	li {
+		&:hover a:hover {
+			.transitions(all, .3s, ease-in);
+		}
+		a {
+			.transitions(all, .3s, ease-out);
+
+		}
+	}	
+	.show {
+		display: block;
+		.transitions(all, .3s, ease-out);
+	}
+
+	.dropdown-menu {
+		left: -20px !important;
+		padding: 0 !important;
+		a {
+			padding: 15px 0 !important;
+			text-align: center;
+			&:hover {
+				background: @brand-primary !important;
+				color: #f0f0f0;
+			}
+		}
+	}
+}
+
+//General settings for sections and articles:
+section {
+	article {
+		.landscape(6);
+		.small(12);
+	}
+}
+
+//home page
+.home {
+	overflow:hidden;
+	.gallery {
+		figure {
+            
+            img { max-width: 100%; }
+			h2 {    
+                position: absolute;
+                top: 0;
+                width: 100%;
+                margin: 0;
+                color: #f0f0f0;
+                background: rgba(255, 255, 255, 0.5);
+                border-top: 2px solid rgba(000, 000, 000, 0.5);
+                border-bottom: 2px solid rgba(000, 000, 000, 0.5);
+                text-align: center;
+                text-shadow: 2px 2px 2px black;
+                
+                @media screen {
+                    @media (max-width: @screen-md) {
+                    font-size: 1.5em;
+                    }
+                    @media (max-width: @screen-sm) {
+                    font-size: 1.25em;
+                    }  
+                    @media (max-width: @screen-xs) {
+                        position: relative;
+                        margin: 0;
+                    }
+                }
+			}
+		}
+        .item { 
+            height: 31vw !important;
+            @media screen and (max-width: @screen-xs) {
+                overflow: visible; 
+                margin-bottom: 46px; 
+            }
+        }
+		#slide1 {
+			/*background: url('../img/Caargo-Ship-Enters-Port-Aerial.jpg') no-repeat 25% 50%;
+			background-size: cover;*/
+		}
+		#slide2 {
+			/*background: url('../img/death-1-compressor.jpg') no-repeat 50% 50%;
+			background-size: cover;*/
+		}
+		#slide3 {
+			/*background: url('../img/landscape-1-compressor.jpg') no-repeat 50% 50%;
+			background-size: cover;*/
+		}
+	}
+}
