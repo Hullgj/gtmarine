@@ -284,7 +284,7 @@ a {
 a:hover,
 a:focus {
   color: #21486b;
-  text-decoration: underline;
+  text-decoration: none;
 }
 a:focus {
   outline: thin dotted;
@@ -2408,7 +2408,7 @@ fieldset[disabled] .btn-link {
 .btn-link:hover,
 .btn-link:focus {
   color: #21486b;
-  text-decoration: underline;
+  text-decoration: none;
   background-color: transparent;
 }
 .btn-link[disabled]:hover,
@@ -3665,6 +3665,13 @@ button.close {
     display: none !important;
   }
 }
+a {
+  transition: color 0.3s ease;
+}
+a:hover {
+  transition: color 0.3s ease;
+  color: #c77c11;
+}
 html,
 body,
 .wrapper {
@@ -3730,20 +3737,32 @@ section article {
 .home {
   overflow: hidden;
 }
-.home .gallery figure img {
-  max-width: 100%;
+@media screen and (min-width: 992px) {
+  .home .gallery figure h2 {
+    position: absolute;
+    bottom: 0;
+    width: 40%;
+    height: 100%;
+    padding: 10% .5% 0 .5%;
+    margin: 0;
+    border-right: 4px solid #fff;
+    color: #fff;
+    background: rgba(51, 112, 165, 0.65);
+    text-align: center;
+    letter-spacing: 3px;
+  }
 }
-.home .gallery figure h2 {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  margin: 0;
-  color: #f0f0f0;
-  background: rgba(255, 255, 255, 0.5);
-  border-top: 2px solid rgba(0, 0, 0, 0.5);
-  border-bottom: 2px solid rgba(0, 0, 0, 0.5);
-  text-align: center;
-  text-shadow: 2px 2px 2px black;
+@media screen and (max-width: 992px) {
+  .home .gallery figure h2 {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 20px 0;
+    margin: 0;
+    color: #f0f0f0;
+    background: rgba(51, 112, 165, 0.65);
+    text-align: center;
+  }
 }
 @media screen and (max-width: 992px) {
   .home .gallery figure h2 {
@@ -3762,7 +3781,7 @@ section article {
   }
 }
 .home .gallery .item {
-  height: 31vw !important;
+  height: 45vh !important;
 }
 @media screen and (max-width: 480px) {
   .home .gallery .item {
@@ -3771,14 +3790,86 @@ section article {
   }
 }
 .home .gallery #slide1 {
-  /*background: url('../img/Caargo-Ship-Enters-Port-Aerial.jpg') no-repeat 25% 50%;
-			background-size: cover;*/
+  background: url('../img/Caargo-Ship-Enters-Port-Aerial.jpg') no-repeat 50% 50%;
+  background-size: cover;
 }
 .home .gallery #slide2 {
-  /*background: url('../img/death-1-compressor.jpg') no-repeat 50% 50%;
-			background-size: cover;*/
+  background: url('../img/Crane-operation-on-offshore.jpg') no-repeat 50% 50%;
+  background-size: cover;
 }
 .home .gallery #slide3 {
-  /*background: url('../img/landscape-1-compressor.jpg') no-repeat 50% 50%;
-			background-size: cover;*/
+  background: url('../img/Large-crane-vessel-installing.jpg') no-repeat 50% 50%;
+  background-size: cover;
+}
+.news article {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 992px) {
+  .news article {
+    float: left;
+    width: 100%;
+  }
+}
+@media (min-width: 1200px) {
+  .news article {
+    float: left;
+    width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .news article {
+    float: left;
+    width: 100%;
+  }
+}
+.news .news-head {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding: 0 0 10px 0 !important;
+}
+@media (min-width: 992px) {
+  .news .news-head {
+    float: left;
+    width: 100%;
+  }
+}
+@media (min-width: 1200px) {
+  .news .news-head {
+    float: left;
+    width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .news .news-head {
+    float: left;
+    width: 100%;
+  }
+}
+.news h2 {
+  line-height: 0;
+}
+.news h3 {
+  margin-top: -10px;
+  border-bottom: 1px solid #ddd;
+  color: #999;
+  padding-bottom: 5px;
+}
+.news .author {
+  text-transform: uppercase;
+  font-size: .8em;
+  letter-spacing: 2px;
+  text-align: right;
+}
+.news .news-head-img {
+  height: 350px;
+  overflow: hidden;
+}
+.news .news-body {
+  text-align: justify;
+  margin: 20px 0;
 }
