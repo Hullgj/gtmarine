@@ -3737,36 +3737,29 @@ section article {
 .home {
   overflow: hidden;
 }
+.home .gallery figure h2 {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  background: rgba(51, 112, 165, 0.65);
+  margin: 0;
+}
 @media screen and (min-width: 992px) {
   .home .gallery figure h2 {
-    position: absolute;
-    bottom: 0;
     width: 40%;
     height: 100%;
     padding: 10% .5% 0 .5%;
-    margin: 0;
     border-right: 4px solid #fff;
     color: #fff;
-    background: rgba(51, 112, 165, 0.65);
-    text-align: center;
     letter-spacing: 3px;
   }
 }
 @media screen and (max-width: 992px) {
   .home .gallery figure h2 {
-    position: absolute;
-    bottom: 0;
+    font-size: 1.5em;
     width: 100%;
     padding: 20px 0;
-    margin: 0;
     color: #f0f0f0;
-    background: rgba(51, 112, 165, 0.65);
-    text-align: center;
-  }
-}
-@media screen and (max-width: 992px) {
-  .home .gallery figure h2 {
-    font-size: 1.5em;
   }
 }
 @media screen and (max-width: 768px) {
@@ -3781,6 +3774,9 @@ section article {
   }
 }
 .home .gallery .item {
+  /* Jasnhl: vw = viewport WIDTH, vh = viewport HEIGHT
+			 * updated to 45%, looks nicer and less "compressed"
+			 */
   height: 45vh !important;
 }
 @media screen and (max-width: 480px) {

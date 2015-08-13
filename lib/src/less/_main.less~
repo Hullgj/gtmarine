@@ -1,12 +1,169 @@
 @import '_base.less';
 
+.transitions(@x,@y,@z) {
+	transition: @x @y @z;
+}
+
+.landscape(@col-number) {
+	.make-md-column(@col-number);
+	.make-lg-column(@col-number);
+	.make-sm-column(@col-number);
+}
+
+.small(@col-number) {
+	.make-xs-column(@col-number);
+}
+
+a {
+	.transitions(color, .3s, ease);
+	&:hover {
+		.transitions(color, .3s, ease);
+		color: darken(@brand-warning, 20%);
+	}
+}
+
+html, body, .wrapper { 
+	width: 100%;
+}
+
+.wrapper {
+	border-top: 4px solid @brand-primary;
+}
+
 .nav {
 	text-transform: uppercase;
-	.navbar {
-		li {
-			a{
-			
+	.nav-active {
+		background: lighten(@brand-primary, 35%);
+	}
+
+	li {
+		&:hover a:hover {
+			.transitions(all, .3s, ease-in);
+		}
+		a {
+			.transitions(all, .3s, ease-out);
+
+		}
+	}	
+	.show {
+		display: block;
+		.transitions(all, .3s, ease-out);
+	}
+
+	.dropdown-menu {
+		left: -20px !important;
+		padding: 0 !important;
+		a {
+			padding: 15px 0 !important;
+			text-align: center;
+			&:hover {
+				background: @brand-primary !important;
+				color: #f0f0f0;
 			}
-		}	
+		}
+	}
+}
+
+//General settings for sections and articles:
+section {
+	article {
+		.landscape(6);
+		.small(12);
+	}
+}
+
+//home page
+.home {
+	overflow:hidden;
+	.gallery {
+		figure {
+			h2 {    
+				position: absolute;
+				bottom: 0;
+				text-align: center;
+				background: rgba(51, 112, 165, 0.65);
+				margin: 0;
+
+				@media screen {
+					@media (min-width: @screen-md) {
+						width: 40%;
+						height: 100%;
+						padding: 10% .5% 0 .5%;
+						border-right: 4px solid #fff;
+						color: #fff;
+						letter-spacing: 3px;
+					}
+					@media (max-width: @screen-md) {
+						font-size: 1.5em;
+						width: 100%;
+						padding: 20px 0;
+						color: #f0f0f0;
+					}
+					@media (max-width: @screen-sm) {
+						font-size: 1.25em;
+					}  
+					@media (max-width: @screen-xs) {
+						position: relative;
+						margin: 0;
+					}
+				}
+			}
+		}
+		.item { 
+			/* Jasnhl: vw = viewport WIDTH, vh = viewport HEIGHT
+			 * updated to 45%, looks nicer and less "compressed"
+			 */
+			height: 45vh !important;
+			@media screen and (max-width: @screen-xs) {
+				overflow: visible; 
+				margin-bottom: 46px; 
+			}
+		}
+		#slide1 {
+			background: url('../img/Caargo-Ship-Enters-Port-Aerial.jpg') no-repeat 50% 50%;
+			background-size: cover;
+		}
+		#slide2 {
+			background: url('../img/Crane-operation-on-offshore.jpg') no-repeat 50% 50%;
+			background-size: cover;
+		}
+		#slide3 {
+			background: url('../img/Large-crane-vessel-installing.jpg') no-repeat 50% 50%;
+			background-size: cover;
+		}
+	}
+}
+
+//news page
+.news {
+	article {
+		.landscape(12);
+	}
+	.news-head {
+		.landscape(12);
+		padding: 0 0 10px 0 !important;
+	}
+	h2 {
+		line-height: 0;
+	}
+	h3 {
+		margin-top: -10px;
+		border-bottom: 1px solid #ddd;
+		color: #999;
+		padding-bottom: 5px;
+	}
+	.author {
+		text-transform: uppercase;
+		font-size: .8em;
+		letter-spacing: 2px;
+		text-align: right;
+	}
+	.news-head-img {
+		height: 350px;
+		overflow: hidden;
+	}
+	.news-body {
+		text-align: justify;
+		margin: 20px 0;
 	}
 }
