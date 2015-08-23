@@ -11,24 +11,16 @@ echo $nav->getNav('bootstrap','GT Marine Offshore',false);
 		<section class="container">
 			<h1>Career</h1>
 			<article>
-
+                <figure><img src="app/src/img/on-site-inspections.jpg" alt="Image two engineers inspecting a document on site of a gas and oil field" /></figure>
 			</article>
 			<article>
-				<h2>article.title</h2>
-				<p>
-					<strong>Are you looking for a career in the Oil and Gas industry?<br>
-						Would you like to work on the oil Rigs?</strong><br><br>
-
-					Well look no further, get the training, get basic qualification in the UK, Europe, USA and Asia and Earn $250-- $1500 per/day <br><br>
-
-					We have Bank of Courses ranging from one week to six months programme <br><br>
-
-					Whatever your need we will work with you using our wealth of experience to structure an effective training programme/ course to facilitate your employment in the Oil and Gas industry <br><br>
-
-					To get started, give us a call, speak to one of our experience consultant and we do the rest <br><br>
-					Tel: xxxxxxxxxxxxxx, xxxxxxxxxxxxx
-
-				</p>
+                <h2>When you will progress</h2>
+				<h3>Are you looking for a career in the Oil &amp; Gas industry?</h3>
+                <h3>Would you like to work on an oil rig?</h3>
+                <p>Well, look no further, get the training, basic qualifications in the UK, Europe, USA and Asia and Earn and you could end up earning from <strong>$250 to $1500 per/day</strong>.</p>
+                <p>We have a bank of courses ranging from one week to six-month programmes.</p>
+                <p>Whatever your need we will work with you using our wealth of experience to structure an effective training programme/ course to facilitate your employment in the Oil &amp; Gas industry.</p>
+                <p>To get started, give us a call; speak to one of our experienced consultants and we will do the rest.<br />Tel: xxxxxxxxxxxxxx, xxxxxxxxxxxxx</p>
 			</article>
 		</section>
 	</div>

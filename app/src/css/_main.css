@@ -3665,6 +3665,9 @@ button.close {
     display: none !important;
   }
 }
+img {
+  max-width: 100%;
+}
 a {
   transition: color 0.3s ease;
 }

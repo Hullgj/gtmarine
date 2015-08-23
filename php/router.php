@@ -9,7 +9,7 @@ $nav = new Nav([
 	'home' => 'home', 
 	'about-us' => ['about-us','services','courses'],  
 	'career' => 'career',
-	'testimonial' => 'testimonial',
+	'testimonials' => 'testimonials',
 	'news' => 'news',
 	'contacts' => 'contacts', 
 	'client' => 'client']);
@@ -29,7 +29,7 @@ $pageRequest = array_values($requestURI);
 
 //LIMITING USERS TO ONE SLASH
 
-if (array_key_exists(1, $pageRequest)) {
+if (array_key_exists(1, $pageRequest)) { 
 	header('Location: ../404');
 }
 
